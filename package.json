@@ -1,0 +1,29 @@
+{
+  "name": "electron-web-app",
+  "productName": "Google Keep",
+  "productURL": "https://keep.google.com",
+  "version": "1.0.0",
+  "description": "Electron webapp for hosting apps like Google Hangouts, Google Keep",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-icon": "png2icons ./assets/keep-512.png build/icon -allp",
+    "build-app": "electron-packager . --overwrite --out \"build\" --icon=\"./build/icon\"",
+    "build-clean": "rimraf build",
+    "build": "npm run build-icon; npm run build-app"
+  },
+  "keywords": [
+    "electron",
+    "web",
+    "app"
+  ],
+  "author": "Anudeep P<anudeep.webdev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^13.0.0",
+    "mkdirp": "^0.5.1",
+    "png2icons": "^1.0.1",
+    "rimraf": "^2.6.2"
+  }
+}
